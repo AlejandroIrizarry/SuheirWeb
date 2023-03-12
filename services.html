@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Services – Suheir Irizarry Designs</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+          rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/styles.css" />
+
+        	<!-- It connects with the file holding the data validation functions. -->
+       	<script type="text/javascript" language="javascript" src="js/verifyform.js"></script>
+
+      </head>
+
+    <style>
+      <!--
+      .page-title {
+        color: rgb(201, 189, 189);
+        background-image: url("images/house_front.jpg");
+        padding: 100px;
+        margin-top: 0;
+      }
+      -->
+    </style>
+    <!-- Page Header -->
+    <header>
+      <!-- Page Navigator -->
+      <nav class="nav collapsible">
+        <a class="nav__brand" href="/"><img src="images/LOGO3.svg" alt="" /></a>
+        <svg class="icon icon--white nav__toggler">
+          <use href="images/sprite.svg#menu"></use>
+        </svg>
+        <ul class="list nav__list collapsible__content nobull">
+          <li class="nav__item"><a href="index.html">Home</a></li>
+          <li class="nav__item"><a href="about.html">About</a></li>
+          <li class="nav__item"><a href="portfolio.html">Portfolio</a></li>
+          <li class="nav__item"><a href="services.html">Services</a></li>
+          <li class="nav__item"><a href="contact.html">Contact</a></li>
+          <li class="nav__item"><a href="webtopic.html">Web Topic</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Page Title -->
+    <h2 class="page-title">Design Services</h2>
+    <p style="font-size: 30px; font-family:Georgia, 'Times New Roman', Times, serif">Talk to us about your needs and we’ll guide you to the right services that satisfy your needs. Below, we’ve outlined a range of design services for engaging with Suheir. I look forward to helping you achieve something special.</p>
+    <ul class="nobull">
+      <li><a class="list_item" href="#rendering">3D Rendering</a></li>
+      <li><a class="list_item" href="#animation">3D Animation</a></li>
+      <li><a class="list_item" href="#consulting">Consulting Services</a></li>
+    </ul>
+    <div class="section-container">
+      <div id="rendering" class="section-title">3D Rendering Services</div>
+      <p class="section-description">If you are planning on building a new home or want to bring a design concept to life, then this is the perfect service for you. This service will help you develop and visualize your proyect through a rendered 3D model. </p>
+      <br/>
+      <img class="default-image-size" src="images/Outdoor.jpeg" style="box-shadow: rgba(75, 69, 60, 0.651) 10px 10px;">
+      <br/><br/>
+      <a href="#apply"><div class="caption btn btn--secondary btn__apply">Apply</div></a>
+    </div>
+    <div class="section-container">
+      <div id="animation" class="section-title">3D Animation Services</div>
+      <p class="section-description">Have an idea that you can't get out of your mind that involves animation? Then you are at the right place. Interior Designs is not the only focus here at Suheir Irizarry Designs. Suheir's passion for design has led her to create fun and simple three dimensional animations that can serve as fun elements on any type of graphical project.
+      <br/><br/>
+        <video
+              autoplay
+              loop
+              class="video-size video-deco"
+              src="videos/slide_animation.mp4"
+            >
+              Your browser doesn't support videos.
+        </video>
+        <br/>
+      <a style="color: #fff;" href="#apply" !important><div class="caption btn btn--secondary btn__apply">Apply</div></a>
+    </div>
+    <div class="section-container">
+      <div id="consulting" class="section-title">Consulting Services</div>
+      <p class="section-description">If you are building a new home or are looking forward to renovating some kind of interior space, then Suheir is the right designer for you. Suheir Irizarry Designs offers consultation services where you can obtain professional assistance and mentorship with any type of brand new architectual interior design you are trying to develop. Suheir will oversee all design details and make sure you end up with a successful implementation of your desired space.</p>
+      <a href="#apply"><div class="caption btn btn--secondary btn__apply">Apply</div></a>
+    </div>
+
+    <!-- Page Forms -->
+    <form class="form-background" id="applyform" action="processapply.php" method="POST">
+      <div class="form-group">
+        <label for="firstname">Full Name</label>
+        <input
+          id="firstname"
+          type="text"
+          name="firstname"
+          placeholder="First Name"
+          size="30"
+          required
+        />
+        <input class="input_initial" type="text" id="initial" name="initial" placeholder="Initial" maxlength="2" size="2" />
+        <input type="text" id="lastname" name="lastname" placeholder="Last Name" size="60" required/>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input class="input_email" type="email" id="email" name="email" size="256" placeholder="example@email.com" maxlength="256" required/>
+      </div>
+      <span style="float: left;">
+        <div class="input_service">Type of Service:</div>
+        <div class="form-group form-radio">
+          <input type="radio" id="render" name="service" value="RENDERING" size="10" required>
+          <label for="render">3D Rendering</label><br>
+          <input type="radio" id="animate" name="service" value="ANIMATION" size="10">
+          <label for="animate">3D Animation</label><br>
+          <input type="radio" id="consult" name="service" value="CONSULTING" size="10">
+          <label for="consult">Consulting Services</label>
+        </div>
+      </span>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input id="phone" name="phone" type="text" placeholder="(XXX)-XXX-XXXX" maxlength="14" size="14" required/>
+      </div>
+      <div class="form-group">
+        <label for="address1">Address</label>
+        <input id="address1" name="address1" type="text" placeholder="Address Line 1" maxlength="50" size="50" required/>
+        <input id="address2" name="address2" type="text" placeholder="Address Line 2" maxlength="50" size="50" required/>
+        <input class="input_apartment" id="apartment" name="apartment" type="text" placeholder="Apartment" maxlength="10" size="10"/>
+        <br/>
+        <input id="city" name="city" type="text" placeholder="City" maxlength="20" size="20" required/>
+        <input list="countries" id="country" name="country" type="text" placeholder="Country" size="20" autocomplete="on" required/>
+        <datalist id="countries">
+            <option value="AU">Australia</option>
+            <option value="CA">Canada</option>
+            <option value="IN">India</option>
+            <option value="US">United States</option>
+        </datalist>
+        <select class="input_state" id="state" name="state">
+            <option value="">State</option>
+            <option value="NONE">N/A</option>
+            <optgroup label="U.S State">
+                <option value="FL">Florida</option>
+                <option value="VG">Virginia</option>
+                <option value="NY">New York</option>
+            </optgroup>   
+            <optgroup label="U.S Territory">
+                <option value="PR">Puerto Rico</option>
+                <option value="VI">U.S Virgin Islands</option>
+                <option value="AS">American Samoa</option>
+                <option value="NM">Northern Mariana Islands</option>
+                <option value="GM">Guam</option>
+                </optgroup>     
+        </select>
+        <br/>
+        <input class="input_zip" id="zip" name="zip" type="text" placeholder="ZIP Code" maxlength="8" minlength="4" size="8" required/>
+      </div>
+      <div class="form-group">
+        <label for="subject">Project name</label>
+        <span class="input_subject"></span>
+        <input id="subject" name="subject" type="text" size="30" maxlength="30" required/>
+      </div>
+      <div class="form-textfield">
+        <label for="description"
+          >Share information about your project to see how I can help!</label
+        >
+        <textarea id="description" name="description" size="250" required></textarea>
+      </div>
+      <button type="submit" name="insert" value="INSERT DATA">Submit</button>
+      <button type="reset" name="reset">Clear</button>
+      <br/><br/>
+      <div>
+      <label class="input_file">File Attachments</label>
+      <input class="input_file" id="file1" name="file1" type="file"/ >
+      <br/>
+      <input class="input_file" id="file2" name="file2" type="file"/>
+    </div>
+    </form>
+    <a href="reports.php"><div class="caption btn btn--secondary btn__apply">Reports</div></a>
+
+    <!-- Page Footer -->
+    <br />
+    <footer class="block block--dark footer">
+      <div class="container grid footer__sections">
+        <section class="collapsible collapsible--expanded footer__section">
+          <div class="collapsible__header">
+            <h2 class="collapsible__heading footer__heading">Company</h2>
+            <svg class="icon icon--white collapsible__chevron">
+              <use href="images/sprite.svg#chevron"></use>
+            </svg>
+          </div>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="services.html">Services</a></li>
+            </ul>
+          </div>
+        </section>
+        <section class="collapsible footer__section">
+          <div class="collapsible__header">
+            <h2 class="collapsible__heading footer__heading">Designer</h2>
+            <svg class="icon icon--white collapsible__chevron">
+              <use href="images/sprite.svg#chevron"></use>
+            </svg>
+          </div>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="about.html">About</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+          </div>
+        </section>
+        <section class="collapsible footer__section">
+          <div class="collapsible__header">
+            <h2 class="collapsible__heading footer__heading">Support</h2>
+            <svg class="icon icon--white collapsible__chevron">
+              <use href="images/sprite.svg#chevron"></use>
+            </svg>
+          </div>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </section>
+        <div class="footer__brand">
+          <img src="images/LOGO3.svg" alt="Suheir Irizarry Designs Logo" />
+          <p class="footer__copyright">© 2021. Suheir Irizarry</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Serves the as the primary javascript file for page elements functionality -->
+    <script type="text/javascript" language="javascript" src="js/main.js"></script>
+
+    <!-- Merge the elements of the form to validate with the defined functions at the head -->
+	<script type="text/javascript" language="javascript" src="js/verifyformregister.js"></script>
+
+  </body>
+</html>

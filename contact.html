@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact – Suheir Irizarry Designs</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- It connects with the file holding the data validation functions. -->
+    <script
+      type="text/javascript"
+      language="javascript"
+      src="js/verifyform.js"
+    ></script>
+  </head>
+  <style>
+    body {
+      background-image: url("images/FallVibes.png") !important;
+    }
+  </style>
+  <body>
+    <!-- Page Header -->
+    <header>
+      <!-- Page Navigator -->
+      <nav class="nav collapsible">
+        <a class="nav__brand" href="/"><img src="images/LOGO3.svg" alt="" /></a>
+        <svg class="icon icon--white nav__toggler">
+          <use href="images/sprite.svg#menu"></use>
+        </svg>
+        <ul class="list nav__list collapsible__content nobull">
+          <li class="nav__item"><a href="index.html">Home</a></li>
+          <li class="nav__item"><a href="about.html">About</a></li>
+          <li class="nav__item"><a href="portfolio.html">Portfolio</a></li>
+          <li class="nav__item"><a href="services.html">Services</a></li>
+          <li class="nav__item"><a href="contact.html">Contact</a></li>
+          <li class="nav__item"><a href="webtopic.html">Web Topic</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Page Title -->
+    <h2 class="page-title">Contact Us</h2>
+
+    <!-- Page Forms -->
+    <form id="contactform" action="processcontact.php" method="POST">
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <input
+          type="text"
+          id="firstname"
+          name="firstname"
+          placeholder="First Name"
+          autofocus
+          size="30"
+          maxlength="30"
+          required
+        />
+        <input
+          class="input_initial"
+          type="text"
+          id="initial"
+          name="initial"
+          placeholder="Initial"
+          maxlength="2"
+          size="2"
+        />
+        <input
+          type="text"
+          id="lastname"
+          name="lastname"
+          placeholder="Last Name"
+          size="60"
+          maxlength="60"
+          required
+        />
+      </div>
+      <div class="form-group" style="float: left; margin-right: 5px">
+        <label for="email">Email</label>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          placeholder="example@email.com"
+          size="256"
+          maxlength="256"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input
+          id="phone"
+          name="phone"
+          type="text"
+          placeholder="(XXX)-XXX-XXXX"
+          size="14"
+          maxlength="14"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="address1">Address</label>
+        <input
+          id="address1"
+          name="address1"
+          type="text"
+          placeholder="Address Line 1"
+          maxlength="50"
+          size="50"
+          required
+        />
+        <input
+          id="address2"
+          name="address2"
+          type="text"
+          placeholder="Address Line 2"
+          maxlength="50"
+          size="50"
+          required
+        />
+        <input
+          class="input_apartment"
+          id="apartment"
+          name="apartment"
+          type="text"
+          placeholder="Apartment"
+          maxlength="10"
+          size="10"
+        />
+        <br />
+        <input
+          id="city"
+          name="city"
+          type="text"
+          placeholder="City"
+          maxlength="20"
+          size="20"
+          required
+        />
+        <input
+          list="countries"
+          id="country"
+          name="country"
+          type="text"
+          placeholder="Country"
+          size="20"
+          autocomplete="on"
+          required
+        />
+        <datalist id="countries">
+          <option value="AU">Australia</option>
+          <option value="CA">Canada</option>
+          <option value="IN">India</option>
+          <option value="US">United States</option>
+        </datalist>
+        <select class="input_state" id="state" name="state">
+          <option value="">State</option>
+          <option value="NONE">N/A</option>
+          <optgroup label="U.S State">
+            <option value="FL">Florida</option>
+            <option value="VG">Virginia</option>
+            <option value="NY">New York</option>
+          </optgroup>
+          <optgroup label="U.S Territory">
+            <option value="PR">Puerto Rico</option>
+            <option value="VI">U.S Virgin Islands</option>
+            <option value="AS">American Samoa</option>
+            <option value="NM">Northern Mariana Islands</option>
+            <option value="GM">Guam</option>
+          </optgroup>
+        </select>
+        <br />
+        <span class="inbetween_message">
+          You can also contact us at <br />
+          <a class="mail" href="mailto:suheir@mail.com">suheir@mail.com</a>
+        </span>
+        <input
+          class="input_zip"
+          id="zip"
+          name="zip"
+          type="text"
+          placeholder="ZIP Code"
+          maxlength="8"
+          minlength="4"
+          size="8"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="question1">How did you hear about me?</label>
+        <input
+          id="how"
+          name="how"
+          type="text"
+          size="60"
+          maxlength="60"
+          required
+        />
+      </div>
+      <div class="form-textfield">
+        <label for="question2">Share information to see how I can help!</label>
+        <textarea
+          id="info"
+          name="info"
+          size="250"
+          maxlength="250"
+          required
+        ></textarea>
+      </div>
+      <button type="submit" name="submit">Submit</button>
+      <button type="reset" name="reset">Clear</button>
+    </form>
+    <!-- Page Footer -->
+    <footer class="block block--dark footer">
+      <div class="container grid footer__sections">
+        <section class="collapsible collapsible--expanded footer__section">
+          <div class="collapsible__header">
+            <h2 class="collapsible__heading footer__heading">Company</h2>
+            <svg class="icon icon--white collapsible__chevron">
+              <use href="images/sprite.svg#chevron"></use>
+            </svg>
+          </div>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="services.html">Services</a></li>
+            </ul>
+          </div>
+        </section>
+        <section class="collapsible footer__section">
+          <div class="collapsible__header">
+            <h2 class="collapsible__heading footer__heading">Designer</h2>
+            <svg class="icon icon--white collapsible__chevron">
+              <use href="images/sprite.svg#chevron"></use>
+            </svg>
+          </div>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="about.html">About</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+          </div>
+        </section>
+        <section class="collapsible footer__section">
+          <div class="collapsible__header">
+            <h2 class="collapsible__heading footer__heading">Support</h2>
+            <svg class="icon icon--white collapsible__chevron">
+              <use href="images/sprite.svg#chevron"></use>
+            </svg>
+          </div>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </section>
+        <div class="footer__brand">
+          <img src="images/LOGO3.svg" alt="Suheir Irizarry Designs Logo" />
+          <p class="footer__copyright">© 2021. Suheir Irizarry</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Serves the as the primary javascript file for page elements functionality -->
+    <script
+      type="text/javascript"
+      language="javascript"
+      src="js/main.js"
+    ></script>
+
+    <!-- Merge the elements of the form to validate with the defined functions at the head -->
+    <script
+      type="text/javascript"
+      language="javascript"
+      src="js/verifyformregister.js"
+    ></script>
+  </body>
+</html>
